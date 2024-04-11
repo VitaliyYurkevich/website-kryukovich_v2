@@ -102,7 +102,6 @@ const DivClass = styled.div`
   width: 100%;
   height: 8%; /* Высота затемнения */
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%);
-  border: 1px solid red;
   @media ${theme.media.mobile} {
    margin-bottom: -18px
   }
@@ -113,9 +112,10 @@ const PhotoWrapper = styled.div`
   z-index: 0;
   margin-top: 15px;
 
+  
   @media ${theme.media.mobile} {
     width: 290px;
-    height: 360px;
+    height: 380px;
     top: 17px;
     left: -20px
   }
@@ -127,11 +127,9 @@ const Photo = styled.img`
   height: 700px;
   object-fit: cover;
   //background-color: darkblue;
-  border: 1px solid red;
   @media ${theme.media.mobile} {
     width: 310px;
-    height: 380px;
-    padding-top: 10px;
+    height: 390px;
   }
 `
 

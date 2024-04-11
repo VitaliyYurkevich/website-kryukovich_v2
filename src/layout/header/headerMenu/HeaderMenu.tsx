@@ -39,7 +39,7 @@ export const StyledHeaderMenu = styled.nav`
     }
     
     @media ${theme.media.mobile} {
-      gap: 20px;
+      gap: 10px;
     }
   }
   

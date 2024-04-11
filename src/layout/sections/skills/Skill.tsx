@@ -60,6 +60,9 @@ const StyledTextSkill = styled.div`
   text-align: center;
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
+  @media ${theme.media.mobile} {
+    font-size: 16px;
+  }
 `
 
 const StyledGoldenText = styled.div`
@@ -67,4 +70,7 @@ const StyledGoldenText = styled.div`
   text-align: center;
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
+  @media ${theme.media.mobile} {
+    font-size: 16px;
+  }
 `

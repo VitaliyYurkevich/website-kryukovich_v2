@@ -10,7 +10,7 @@ import {MobileMenu} from "./mobileMenu/MobileMenu";
 
 export const Header = () => {
 
-    let items = ['Обо мне', 'Тарифы', 'Отзывы', 'Контакты']
+    let items = ['Опыт', 'Обо мне', 'Типы тренировок', 'Контакты', '+7(905)201-22-37 ']
 
     return (
         <StyledHeader>
@@ -19,7 +19,7 @@ export const Header = () => {
                     <Initials />
                     <HeaderMenu items={items}/>
                     <MobileMenu items={items} />
-                    <Contact />
+                    {/*<Contact />*/}
                 </FlexWrapper>
             </MyContainer>
         </StyledHeader>
@@ -36,12 +36,16 @@ const StyledHeader = styled.header`
   right: 0;
   z-index: 99999;
   opacity: 0.6;
+  
+  
 
   @media ${theme.media.tablet} {
     
   }
 
   @media ${theme.media.mobile} {
-   
+    ${FlexWrapper} {
+      justify-content: center;
+    }
   }
 `

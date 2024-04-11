@@ -27,7 +27,8 @@ const ButtonStyled = styled.button<{ $buttonColor?: string; }>`
   border: 0;
   box-shadow: 0 0 5px #ffffff;
   font-size: 18px;
-  
+  color: black;
+  font-weight: bold;
   @media ${theme.media.mobile} {
     
   }

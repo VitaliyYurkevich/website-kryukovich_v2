@@ -1,24 +1,32 @@
-import React, {useState} from 'react';
+import React, {MouseEventHandler, useState} from 'react';
 import styled, {css} from "styled-components";
 import {HeaderMenuPropsType} from "../headerMenu/HeaderMenu";
 import {theme} from "../../../style/Theme";
 
 export const MobileMenu = (props: HeaderMenuPropsType) => {
 
-    const [isOpen, setIsOpen] = useState(true)
+    const [isOpen, setIsOpen] = useState(false)
+
+    const onClickHandler = () => {
+        setIsOpen(!isOpen)
+    }
 
     return (
         <StyledMobileMenu>
-            <BurgerButton isOpen={false}>
+            <BurgerButton onClick={onClickHandler} isOpen={isOpen}>
                 <span></span>
             </BurgerButton>
-            <MobileMenuWrapper isOpen={false}>
+            <MobileMenuWrapper onClick={onClickHandler} isOpen={isOpen}>
                 <ul>
                     {props.items.map((i, index) => {
                         return (
                             <li>
                                 <Link href={''}>
-                                    {i}
+                                    <StyledMask>
+                                        <span>
+                                           {i}
+                                        </span>
+                                    </StyledMask>
                                 </Link>
                             </li>
                         )
@@ -45,8 +53,9 @@ const MobileMenuWrapper = styled.div<{ isOpen: boolean }>`
   right: 0;
   bottom: 0;
   z-index: 99999;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.95);
   display: none;
+  
 
   ${props => props.isOpen && css<{ isOpen: boolean }>`
     display: flex;
@@ -67,25 +76,26 @@ const Link = styled.a`
   //color: var(--text, #BDEBEA);
 
   font-family: Poppins, sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   font-style: normal;
+  //color: white;
   font-weight: 500;
-  color: #ffffff;
+  
 `
 
 const BurgerButton = styled.button<{ isOpen: boolean }>`
   position: fixed;
   top: -100px;
   right: -100px;
-  width: 200px;
-  height: 200px;
+  width: 190px;
+  height: 190px;
   z-index: 999999;
   background-color: rgba(255, 255, 255, 0);
 
   span {
     display: block;
     width: 36px;
-    height: 3px;
+    height: 2px;
     background-color: #ff0000;
     position: absolute;
     left: 40px;
@@ -101,7 +111,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       height: 2px;
       background-color: #fa0000;
       position: absolute;
-      transform: translateX(-10px);
+      transform: translateY(-10px);
 
       ${props => props.isOpen && css<{ isOpen: boolean }>`
         transform: rotate(-45deg) translateY(0);
@@ -113,7 +123,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       content: '';
       display: block;
       width: 24px;
-      height: 3px;
+      height: 2px;
       background-color: #fa0000;
       position: absolute;
       transform: translateY(10px);
@@ -124,4 +134,10 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       `}
     }
   }
+`
+
+const StyledMask = styled.span`
+color: white;
+  font-weight: bold;
+  
 `
