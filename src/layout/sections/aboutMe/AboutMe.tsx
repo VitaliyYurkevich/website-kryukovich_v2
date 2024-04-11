@@ -109,6 +109,7 @@ const PhotoWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  //s
 `
 
 const DivClass = styled.div`
