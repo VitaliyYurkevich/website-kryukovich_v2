@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/website-kryukovich_v2/static/css/main.e6c13ad2.css",
+    "main.js": "/website-kryukovich_v2/static/js/main.cd2b4c83.js",
+    "static/js/787.d8a0264b.chunk.js": "/website-kryukovich_v2/static/js/787.d8a0264b.chunk.js",
+    "static/media/imgTrainingInfo_ManAndWoman.png": "/website-kryukovich_v2/static/media/imgTrainingInfo_ManAndWoman.eb0f5bdc95380621643b.png",
+    "static/media/BackgroundImageTrainingInfo.jpg": "/website-kryukovich_v2/static/media/BackgroundImageTrainingInfo.3aebc41fd8f3c6ed9cc4.jpg",
+    "static/media/imgTrainingInfo_GeneralPhysical.png": "/website-kryukovich_v2/static/media/imgTrainingInfo_GeneralPhysical.73018270e4bec831de68.png",
+    "static/media/KryukovichAboutMePhoto (1).png": "/website-kryukovich_v2/static/media/KryukovichAboutMePhoto (1).5a0229ca37dcc94ca73f.png",
+    "static/media/imgTrainingInfo_PP.png": "/website-kryukovich_v2/static/media/imgTrainingInfo_PP.9bf4f429fbc3585f7f87.png",
+    "static/media/imgTrainingInfo_body_building.jpg": "/website-kryukovich_v2/static/media/imgTrainingInfo_body_building.b4d54831f512922ba05b.jpg",
+    "static/media/BackgroundImageMain.jpg": "/website-kryukovich_v2/static/media/BackgroundImageMain.431472808c7ef51f7d1b.jpg",
+    "static/media/BackGroundImageAboutMe.jpg": "/website-kryukovich_v2/static/media/BackGroundImageAboutMe.a1e80f2298d24d8641ae.jpg",
+    "static/media/KryukovichMainPhotoZipp.png": "/website-kryukovich_v2/static/media/KryukovichMainPhotoZipp.17637bfdfb5be3934fc2.png",
+    "static/media/BackGroundImageContact.jpg": "/website-kryukovich_v2/static/media/BackGroundImageContact.47ed96fbb911c6821561.jpg",
+    "static/media/atlet.jpg": "/website-kryukovich_v2/static/media/atlet.44e2a7f832129d45aaf9.jpg",
+    "static/media/imgTrainingInfo_PowerStamina.jpg": "/website-kryukovich_v2/static/media/imgTrainingInfo_PowerStamina.a9f56c03d6a2ece8cf7f.jpg",
+    "index.html": "/website-kryukovich_v2/index.html",
+    "main.e6c13ad2.css.map": "/website-kryukovich_v2/static/css/main.e6c13ad2.css.map",
+    "main.cd2b4c83.js.map": "/website-kryukovich_v2/static/js/main.cd2b4c83.js.map",
+    "787.d8a0264b.chunk.js.map": "/website-kryukovich_v2/static/js/787.d8a0264b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.cd2b4c83.js"
+  ]
+}
