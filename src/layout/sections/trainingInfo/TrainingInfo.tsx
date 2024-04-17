@@ -13,6 +13,7 @@ import img6 from "../../../assets/images/trainingInfo/atlet.jpg"
 import BackgroundImageTrainingInfo from "../../../assets/images/trainingInfo/BackgroundImageTrainingInfo.jpg";
 import {font} from "../../../style/Common";
 import {theme} from "../../../style/Theme";
+import {Fade} from "react-awesome-reveal";
 
 
 
@@ -22,16 +23,30 @@ export const TrainingInfo = () => {
         <BackImageWrapper>
             <StyledTrainingInfo>
                 <MyContainer>
-                    <StyledTitle>
-                        <TrainingInfoTitle>Типы <GoldTextTitle>тренировок</GoldTextTitle> </TrainingInfoTitle>
-                    </StyledTitle>
+                    <Fade>
+                        <StyledTitle>
+                            <TrainingInfoTitle>Типы <GoldTextTitle>тренировок</GoldTextTitle> </TrainingInfoTitle>
+                        </StyledTitle>
+                    </Fade>
                     <FlexWrapper wrap={'wrap'} justify={'space-around'} >
-                        <TrainingCard img={img1} cardTitle={'Питание'} cardText={'Составление диет, рекомендации по использованию спортивного питания'} />
-                        <TrainingCard img={img2} cardTitle={'Бодибилдинг'} cardText={'Наращивание сухой мышечной массы'} />
-                        <TrainingCard img={img3} cardTitle={'Функциональный'} cardText={'Тренинг с упором на силу и выносливость'} />
-                        <TrainingCard img={img4} cardTitle={'Физподготовка'} cardText={'Общая физическая подготовка и техника выполнения упражнений'} />
-                        <TrainingCard img={img5} cardTitle={'Спецификация'} cardText={'Мужской и женский фитнес, снижениец процента жира в организме'} />
-                        <TrainingCard img={img6} cardTitle={'Культуризм'} cardText={'Составление плана по достижению целей'} />
+                        <Fade direction={'left'}>
+                            <TrainingCard img={img1} cardTitle={'Питание'} cardText={'Составление диет, рекомендации по использованию спортивного питания'} />
+                        </Fade>
+                        <Fade direction={'right'}>
+                            <TrainingCard img={img2} cardTitle={'Бодибилдинг'} cardText={'Наращивание сухой мышечной массы'} />
+                        </Fade>
+                        <Fade  direction={'left'}>
+                            <TrainingCard img={img3} cardTitle={'Функциональный'} cardText={'Тренинг с упором на силу и выносливость'} />
+                        </Fade>
+                        <Fade direction={'right'}>
+                            <TrainingCard img={img4} cardTitle={'Физподготовка'} cardText={'Общая физическая подготовка и техника выполнения упражнений'} />
+                        </Fade>
+                        <Fade  direction={'left'}>
+                            <TrainingCard img={img5} cardTitle={'Спецификация'} cardText={'Мужской и женский фитнес, снижениец процента жира в организме'} />
+                        </Fade>
+                        <Fade direction={'right'}>
+                            <TrainingCard img={img6} cardTitle={'Культуризм'} cardText={'Составление плана по достижению целей'} />
+                        </Fade>
                     </FlexWrapper>
                 </MyContainer>
             </StyledTrainingInfo>

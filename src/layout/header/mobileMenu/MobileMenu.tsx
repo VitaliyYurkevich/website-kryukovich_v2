@@ -53,7 +53,7 @@ const MobileMenuWrapper = styled.div<{ isOpen: boolean }>`
   right: 0;
   bottom: 0;
   z-index: 99999;
-  background-color: rgba(0, 0, 0, 0.95);
+  background-color: rgba(0, 0, 0, 0.8);
   display: none;
   
 
@@ -68,6 +68,7 @@ const MobileMenuWrapper = styled.div<{ isOpen: boolean }>`
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    font-style: normal;
   }
 `
 
@@ -91,12 +92,13 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
   height: 190px;
   z-index: 999999;
   background-color: rgba(255, 255, 255, 0);
+  border: 0;
 
   span {
     display: block;
     width: 36px;
     height: 2px;
-    background-color: #ff0000;
+    background-color: gold;
     position: absolute;
     left: 40px;
     bottom: 50px;
@@ -109,7 +111,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       display: block;
       width: 36px;
       height: 2px;
-      background-color: #fa0000;
+      background-color: gold;
       position: absolute;
       transform: translateY(-10px);
 
@@ -124,7 +126,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       display: block;
       width: 24px;
       height: 2px;
-      background-color: #fa0000;
+      background-color: gold;
       position: absolute;
       transform: translateY(10px);
 

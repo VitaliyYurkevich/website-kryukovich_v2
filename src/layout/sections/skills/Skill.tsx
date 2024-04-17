@@ -25,6 +25,10 @@ const StyledSkill = styled.div`
   flex-direction: column;
   //position: relative;
   align-items: center;
+  
+ // animation: fadeInDown;
+ // animation-duration: 3s;
+  
   ${theme.media.tablet} {
     flex-direction: row;
   }

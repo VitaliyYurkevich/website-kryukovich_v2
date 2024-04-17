@@ -1,20 +1,22 @@
 import React from 'react';
 import styled from "styled-components";
 import {theme} from "../../style/Theme";
+import {Fade} from "react-awesome-reveal";
 
 type MyButtonPropsType = {
     title: string
     buttonColor?: string
-
 }
 
 
 export const MyButton = (props: MyButtonPropsType) => {
 
     return (
-        <ButtonStyled $buttonColor={props.buttonColor}>
-            {props.title}
-        </ButtonStyled>
+
+            <ButtonStyled $buttonColor={props.buttonColor}>
+                {props.title}
+            </ButtonStyled>
+
     );
 };
 
@@ -29,8 +31,17 @@ const ButtonStyled = styled.button<{ $buttonColor?: string; }>`
   font-size: 18px;
   color: black;
   font-weight: bold;
+  
+  animation: fadeIn;
+  animation-duration: 2s;
+  
   @media ${theme.media.mobile} {
     
+  }
+  
+  :hover {
+    box-shadow: 0 0 30px #ffffff;
+    transition-duration: 1s;
   }
   
 `

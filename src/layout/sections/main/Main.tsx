@@ -7,6 +7,8 @@ import PhotoMain from "../../../assets/images/KryukovichMainPhotoZipp.png"
 import BackGroundImageMain from "../../../assets/images/BackgroundImageMain.jpg"
 import {theme} from "../../../style/Theme";
 import {font} from "../../../style/Common";
+import 'animate.css';
+import {Fade} from "react-awesome-reveal";
 
 export const Main = () => {
     return (
@@ -15,22 +17,28 @@ export const Main = () => {
                 <MyContainer>
                     <FlexWrapper align={'center'} justify={'space-around'} wrap={'wrap'}>
                         <div>
-                            <MainTitle>Построй тело <br/> <GoldTextTitle>своей мечты</GoldTextTitle></MainTitle>
-                            <WrapperSmallText>
-                                   <div>
-                                    <SmallText> Всего за месяц тренировок</SmallText>
-                                    <SmallText> Закажи БЕСПЛАТНУЮ консультацию, чтобы узнать,<br/>
-                                        за сколько дней мы достигнем твоей цели
-                                    </SmallText>
-                                </div>
-                            </WrapperSmallText>
+                            <Fade direction={'right'}>
+                                <MainTitle>Построй тело <br/> <GoldTextTitle>своей мечты</GoldTextTitle></MainTitle>
+                            </Fade>
+                            <Fade direction={'left'}>
+                                <WrapperSmallText>
+                                    <div >
+                                        <SmallText > Всего за месяц тренировок</SmallText>
+                                        <SmallText> Закажи БЕСПЛАТНУЮ консультацию, чтобы узнать,<br/>
+                                            за сколько дней мы достигнем твоей цели
+                                        </SmallText>
+                                    </div>
+                                </WrapperSmallText>
+                            </Fade>
                             <ButtonWrapper>
                                 <MyButton title={'Заказать консультацию'}/>
                                 <MyButton title={'Заказать консультацию'} buttonColor={'white'}/>
                             </ButtonWrapper>
                         </div>
                         <PhotoWrapper>
-                            <Photo src={PhotoMain}/>
+                            <Fade direction={'right'}>
+                                <Photo src={PhotoMain}/>
+                            </Fade>
                             <DivClass></DivClass>
                         </PhotoWrapper>
                     </FlexWrapper>
@@ -122,10 +130,18 @@ const PhotoWrapper = styled.div`
 `
 
 const Photo = styled.img`
+
+  animate__animated {
+    
+  }
+  
+  
+  //display: block;
   max-width: 550px;
   width: 100%;
   height: 700px;
   object-fit: cover;
+  
   //background-color: darkblue;
   @media ${theme.media.mobile} {
     width: 310px;
@@ -149,4 +165,7 @@ const ButtonWrapper = styled.div`
 const GoldTextTitle = styled.p`
   color: #ffffff;
 `
+
+
+
 //#fc5434;

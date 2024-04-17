@@ -12,4 +12,5 @@ export const Initials = () => {
 
 export const StyledInitials = styled.div `
     color: white;
+    opacity: 0.5;
 `

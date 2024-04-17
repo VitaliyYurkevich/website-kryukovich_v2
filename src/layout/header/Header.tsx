@@ -28,14 +28,14 @@ export const Header = () => {
 
 
 const StyledHeader = styled.header`
-  background: rgb(38, 40, 40);
+  background: rgb(38, 40, 40, 0.6);
   padding: 20px 0;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 99999;
-  opacity: 0.6;
+  //opacity: 0.6;
   
   
 

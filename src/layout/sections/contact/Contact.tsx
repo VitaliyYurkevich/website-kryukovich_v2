@@ -5,24 +5,27 @@ import {MyContainer} from "../../../components/MyContainer";
 import {MyButton} from "../../../components/button/MyButton";
 import {theme} from "../../../style/Theme";
 import BackgroundImageContact from "../../../assets/images/BackGroundImageContact.jpg";
+import {Fade} from "react-awesome-reveal";
 
 export const Contact = () => {
     return (
         <BackImageWrapper>
             <StyledContacts>
                 <MyContainer>
-                    <SectionsTitle>Контакты</SectionsTitle>
-                    <StyledForm>
-                        <FieldWrapper>
-                            <StyledTitle>Name</StyledTitle>
-                            <Field placeholder={'name'}/>
-                            <StyledTitle>Email</StyledTitle>
-                            <Field placeholder={'subject'}/>
-                            <StyledTitle>Message</StyledTitle>
-                            <Field  placeholder={'message'} as={'textarea'}/>
-                        </FieldWrapper>
-                        <MyButton title={'Отправить'} />
-                    </StyledForm>
+                    <Fade>
+                        <SectionsTitle>Контакты</SectionsTitle>
+                        <StyledForm>
+                            <FieldWrapper>
+                                <StyledTitle>Name</StyledTitle>
+                                <Field placeholder={'name'}/>
+                                <StyledTitle>Email</StyledTitle>
+                                <Field placeholder={'subject'}/>
+                                <StyledTitle>Message</StyledTitle>
+                                <Field  placeholder={'message'} as={'textarea'}/>
+                            </FieldWrapper>
+                            <MyButton title={'Отправить'} />
+                        </StyledForm>
+                    </Fade>
                 </MyContainer>
             </StyledContacts>
         </BackImageWrapper>

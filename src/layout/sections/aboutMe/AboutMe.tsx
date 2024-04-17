@@ -6,6 +6,7 @@ import BackGroundImageAboutMe from "../../../assets/images/BackGroundImageAboutM
 import PhotoAbout from "../../../assets/images/KryukovichAboutMePhoto (1).png"
 import {theme} from "../../../style/Theme";
 import {font} from "../../../style/Common";
+import {Fade} from "react-awesome-reveal";
 
 export const AboutMe = () => {
 
@@ -14,33 +15,39 @@ export const AboutMe = () => {
             <StyledAboutMe>
                 <MyContainer>
                     <StyledTitle>
-                        <AboutMeTitle>Обо мне</AboutMeTitle>
+                        <Fade>
+                            <AboutMeTitle>Обо мне</AboutMeTitle>
+                        </Fade>
                     </StyledTitle>
                     <StyledWrapper>
-                        <PhotoWrapper>
-                            <Photo src={PhotoAbout}/>
-                            <DivClass></DivClass>
-                        </PhotoWrapper>
-                        <StyledText>
-                            <p>Приятно познакомиться меня зовут <GoldSpan>Крюкович Дмитрий.</GoldSpan> <br/>
-                                Я сертифицированный <GoldSpan>фитнес тренер с опытом более 6 лет.</GoldSpan>
-                            </p>
-                            <p>
-                                Моя жизнь всегда была связана <GoldSpan>со спортом и правильным
-                                питанием.</GoldSpan> Благодаря такой жизненной позции <GoldSpan>я многого </GoldSpan>
-                                достиг.
-                            </p>
-                            <p>
-                                Я убежден в том, <GoldSpan>что здоровый образ жизни делает
-                                человека не только привлекательным, но и счастливым. </GoldSpan>
-                                Именно поэтому я полностью отдаюсь своей работе
-                                и жду того же от своих клиентов.
-                            </p>
-                            <p>
-                                За моей спиной <GoldSpan>более 6 лет успешного опыта в роли
-                                фитнес-тренера. </GoldSpan>
-                            </p>
-                        </StyledText>
+                        <Fade direction={'left'}>
+                            <PhotoWrapper>
+                                <Photo src={PhotoAbout}/>
+                                <DivClass></DivClass>
+                            </PhotoWrapper>
+                        </Fade>
+                        <Fade direction={'right'}>
+                            <StyledText>
+                                <p>Приятно познакомиться меня зовут <GoldSpan>Крюкович Дмитрий.</GoldSpan> <br/>
+                                    Я сертифицированный <GoldSpan>персональный тренер с опытом более 10 лет.</GoldSpan>
+                                </p>
+                                <p>
+                                    Моя жизнь всегда была связана <GoldSpan>со спортом и правильным
+                                    питанием.</GoldSpan> Благодаря такой жизненной позции <GoldSpan>я многого </GoldSpan>
+                                    достиг.
+                                </p>
+                                <p>
+                                    Я убежден в том, <GoldSpan>что здоровый образ жизни делает
+                                    человека не только привлекательным, но и счастливым. </GoldSpan>
+                                    Именно поэтому я полностью отдаюсь своей работе
+                                    и жду того же от своих клиентов.
+                                </p>
+                                <p>
+                                    За моей спиной <GoldSpan>более 10 лет успешного опыта в роли
+                                    персонального тренера. </GoldSpan>
+                                </p>
+                            </StyledText>
+                        </Fade>
                     </StyledWrapper>
                 </MyContainer>
             </StyledAboutMe>

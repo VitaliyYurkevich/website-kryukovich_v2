@@ -48,7 +48,6 @@ export const StyledHeaderMenu = styled.nav`
 
 const Link = styled.a`
   //color: var(--text, #BDEBEA);
-  
   font-family: Poppins, sans-serif;
   font-size: 16px;
   font-style: normal;

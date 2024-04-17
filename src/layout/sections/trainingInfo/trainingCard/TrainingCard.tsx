@@ -39,6 +39,7 @@ const StyledTrainingCard = styled.div`
 
 const StyledTrainingCircle = styled.img`
   border-radius: 50%;
+  object-fit: cover;
 `
 
 const StyledWrapperTitle = styled.div`
