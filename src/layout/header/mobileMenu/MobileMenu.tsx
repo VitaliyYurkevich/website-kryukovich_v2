@@ -44,7 +44,7 @@ export const MobileMenu = () => {
                     {items.map((i, index) => {
                         return (
                             <li>
-                                <Link href={i.href}>
+                                <Link href={`#${i.href}`}>
                                     <StyledMask>
                                         <span>
                                            {i.title}
