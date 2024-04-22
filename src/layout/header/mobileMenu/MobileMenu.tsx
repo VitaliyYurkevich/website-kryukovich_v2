@@ -1,6 +1,7 @@
 import React, {MouseEventHandler, useState} from 'react';
 import styled, {css} from "styled-components";
 import {theme} from "../../../style/Theme";
+import {Link} from "react-scroll";
 
 export const MobileMenu = () => {
 
@@ -44,17 +45,17 @@ export const MobileMenu = () => {
                     {items.map((i, index) => {
                         return (
                             <li>
-                                <Link href={`#${i.href}`}>
+                                <NavLink offset={-90} activeClass='active' smooth={true} spy={true} to={i.href} >
                                     <StyledMask>
                                         <span>
                                            {i.title}
                                         </span>
                                     </StyledMask>
-                                </Link>
+                                </NavLink>
                             </li>
                         )
                     })}
-                    <Link href="tel:+79052012237">+7(905)201-22-37</Link>
+                    <NavLink to={"tel:+79052012237"} >+7(905)201-22-37</NavLink>
                 </ul>
             </MobileMenuWrapper>
         </StyledMobileMenu>
@@ -96,15 +97,27 @@ const MobileMenuWrapper = styled.div<{ isOpen: boolean }>`
 `
 
 
-const Link = styled.a`
+const NavLink = styled(Link)`
   //color: var(--text, #BDEBEA);
-
+    /*&:active {
+    ${MobileMenuWrapper} {
+      display: none;
+    }
+  }*/
   font-family: Poppins, sans-serif;
   font-size: 20px;
   font-style: normal;
   //color: white;
   font-weight: 500;
   color: white;
+
+  &.active {
+    span {
+      color: gold;
+    }
+
+  }
+
 `
 
 const BurgerButton = styled.button<{ isOpen: boolean }>`
@@ -162,7 +175,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
 `
 
 const StyledMask = styled.span`
-color: white;
+  color: white;
   font-weight: bold;
   
 `

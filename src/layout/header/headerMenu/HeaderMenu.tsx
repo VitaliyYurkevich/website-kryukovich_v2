@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {Initials} from "../initials/initials";
 import {theme} from "../../../style/Theme";
 import {Contact} from "../contact/Contact";
+import {Link} from "react-scroll";
 
 
 
@@ -38,9 +39,9 @@ export const HeaderMenu = () => {
                 {items.map((i, index) => {
                     return (
                         <li>
-                            <Link href={`#${i.href}`}>
+                            <NavLink activeClass='active' smooth={true} spy={true} to={i.href}>
                                 {i.title}
-                            </Link>
+                            </NavLink>
                         </li>
                     )
                 })}
@@ -69,11 +70,17 @@ export const StyledHeaderMenu = styled.nav`
   
 `
 
-const Link = styled.a`
+const NavLink = styled(Link)`
   //color: var(--text, #BDEBEA);
   font-family: Poppins, sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
   color: #ffffff;
+  &.active {
+    
+      color: gold;
+    
+
+  }
 `
