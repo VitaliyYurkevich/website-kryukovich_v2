@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/website-kryukovich_v2/static/css/main.8449103f.css",
-    "main.js": "/website-kryukovich_v2/static/js/main.1f2d1b18.js",
+    "main.js": "/website-kryukovich_v2/static/js/main.2ae9a546.js",
     "static/js/787.d8a0264b.chunk.js": "/website-kryukovich_v2/static/js/787.d8a0264b.chunk.js",
     "static/media/imgTrainingInfo_ManAndWoman.png": "/website-kryukovich_v2/static/media/imgTrainingInfo_ManAndWoman.eb0f5bdc95380621643b.png",
     "static/media/BackgroundImageTrainingInfo.jpg": "/website-kryukovich_v2/static/media/BackgroundImageTrainingInfo.3aebc41fd8f3c6ed9cc4.jpg",
@@ -17,11 +17,11 @@
     "static/media/imgTrainingInfo_PowerStamina.jpg": "/website-kryukovich_v2/static/media/imgTrainingInfo_PowerStamina.a9f56c03d6a2ece8cf7f.jpg",
     "index.html": "/website-kryukovich_v2/index.html",
     "main.8449103f.css.map": "/website-kryukovich_v2/static/css/main.8449103f.css.map",
-    "main.1f2d1b18.js.map": "/website-kryukovich_v2/static/js/main.1f2d1b18.js.map",
+    "main.2ae9a546.js.map": "/website-kryukovich_v2/static/js/main.2ae9a546.js.map",
     "787.d8a0264b.chunk.js.map": "/website-kryukovich_v2/static/js/787.d8a0264b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8449103f.css",
-    "static/js/main.1f2d1b18.js"
+    "static/js/main.2ae9a546.js"
   ]
 }
