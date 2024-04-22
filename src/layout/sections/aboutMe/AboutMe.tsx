@@ -12,7 +12,7 @@ export const AboutMe = () => {
 
     return (
         <BackImageWrapper>
-            <StyledAboutMe>
+            <StyledAboutMe id={'Обо мне'}>
                 <MyContainer>
                     <StyledTitle>
                         <Fade>

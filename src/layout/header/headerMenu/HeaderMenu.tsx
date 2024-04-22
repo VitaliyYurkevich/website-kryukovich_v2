@@ -2,21 +2,44 @@ import React from 'react';
 import styled from "styled-components";
 import {Initials} from "../initials/initials";
 import {theme} from "../../../style/Theme";
+import {Contact} from "../contact/Contact";
 
-export type HeaderMenuPropsType = {
-    items: Array<string>
-}
 
-export const HeaderMenu = (props: HeaderMenuPropsType) => {
+
+const items = [
+    {
+        title: "Опыт",
+        href: "Опыт"
+    },
+    {
+        title: "Обо мне",
+        href: "Обо мне"
+    },
+    {
+        title: "Типы тренировок",
+        href: "Типы тренировок"
+    },
+    {
+        title: "Контакты",
+        href: "Контакты"
+    },
+    /*{
+        title: "+7(905)201-22-37",
+        href: "tel:+79052012237"
+    },*/
+]
+
+
+export const HeaderMenu = () => {
 
     return (
         <StyledHeaderMenu>
             <ul>
-                {props.items.map((i, index) => {
+                {items.map((i, index) => {
                     return (
                         <li>
-                            <Link href={''}>
-                                {i}
+                            <Link href={`#${i.href}`}>
+                                {i.title}
                             </Link>
                         </li>
                     )

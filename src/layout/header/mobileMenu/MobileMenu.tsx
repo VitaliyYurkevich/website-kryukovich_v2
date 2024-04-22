@@ -1,9 +1,32 @@
 import React, {MouseEventHandler, useState} from 'react';
 import styled, {css} from "styled-components";
-import {HeaderMenuPropsType} from "../headerMenu/HeaderMenu";
 import {theme} from "../../../style/Theme";
 
-export const MobileMenu = (props: HeaderMenuPropsType) => {
+export const MobileMenu = () => {
+
+    const items = [
+        {
+            title: "Опыт",
+            href: "Опыт"
+        },
+        {
+            title: "Обо мне",
+            href: "Обо мне"
+        },
+        {
+            title: "Типы тренировок",
+            href: "Типы тренировок"
+        },
+        {
+            title: "Контакты",
+            href: "Контакты"
+        },
+        /*{
+            title: "+7(905)201-22-37",
+            href: "tel:+79052012237"
+        },*/
+    ]
+
 
     const [isOpen, setIsOpen] = useState(false)
 
@@ -18,19 +41,20 @@ export const MobileMenu = (props: HeaderMenuPropsType) => {
             </BurgerButton>
             <MobileMenuWrapper onClick={onClickHandler} isOpen={isOpen}>
                 <ul>
-                    {props.items.map((i, index) => {
+                    {items.map((i, index) => {
                         return (
                             <li>
-                                <Link href={''}>
+                                <Link href={i.href}>
                                     <StyledMask>
                                         <span>
-                                           {i}
+                                           {i.title}
                                         </span>
                                     </StyledMask>
                                 </Link>
                             </li>
                         )
                     })}
+                    <Link href="tel:+79052012237">+7(905)201-22-37</Link>
                 </ul>
             </MobileMenuWrapper>
         </StyledMobileMenu>
@@ -55,7 +79,6 @@ const MobileMenuWrapper = styled.div<{ isOpen: boolean }>`
   z-index: 99999;
   background-color: rgba(0, 0, 0, 0.8);
   display: none;
-  
 
   ${props => props.isOpen && css<{ isOpen: boolean }>`
     display: flex;
@@ -81,7 +104,7 @@ const Link = styled.a`
   font-style: normal;
   //color: white;
   font-weight: 500;
-  
+  color: white;
 `
 
 const BurgerButton = styled.button<{ isOpen: boolean }>`

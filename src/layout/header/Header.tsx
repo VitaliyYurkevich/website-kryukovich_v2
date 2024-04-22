@@ -10,16 +10,16 @@ import {MobileMenu} from "./mobileMenu/MobileMenu";
 
 export const Header = () => {
 
-    let items = ['Опыт', 'Обо мне', 'Типы тренировок', 'Контакты', '+7(905)201-22-37 ']
+    let items = ['Опыт', 'Обо мне', 'Типы тренировок', 'Контакты']
 
     return (
         <StyledHeader>
             <MyContainer>
                 <FlexWrapper justify={'space-evenly'} align={'center'}>
                     <Initials />
-                    <HeaderMenu items={items}/>
-                    <MobileMenu items={items} />
-                    {/*<Contact />*/}
+                    <HeaderMenu />
+                    <MobileMenu />
+                    <Contact />
                 </FlexWrapper>
             </MyContainer>
         </StyledHeader>
@@ -40,7 +40,7 @@ const StyledHeader = styled.header`
   
 
   @media ${theme.media.tablet} {
-    
+   
   }
 
   @media ${theme.media.mobile} {

@@ -21,7 +21,7 @@ export const TrainingInfo = () => {
 
     return (
         <BackImageWrapper>
-            <StyledTrainingInfo>
+            <StyledTrainingInfo id={'Типы тренировок'}>
                 <MyContainer>
                     <Fade>
                         <StyledTitle>

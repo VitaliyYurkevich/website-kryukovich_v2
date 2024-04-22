@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {ElementRef, useRef} from 'react';
 import styled from "styled-components";
 import {SectionsTitle} from "../../../components/SectionsTitle";
 import {MyContainer} from "../../../components/MyContainer";
@@ -6,26 +6,53 @@ import {MyButton} from "../../../components/button/MyButton";
 import {theme} from "../../../style/Theme";
 import BackgroundImageContact from "../../../assets/images/BackGroundImageContact.jpg";
 import {Fade} from "react-awesome-reveal";
+import emailjs from '@emailjs/browser';
+import {Simulate} from "react-dom/test-utils";
+import submit = Simulate.submit;
+import {debuglog} from "util";
 
 export const Contact = () => {
+
+    const form = useRef<ElementRef<'form'>>(null);
+
+    const sendEmail = (e: any) => {
+        e.preventDefault();
+
+        if(!form.current) return
+
+
+        emailjs
+            .sendForm('service_ipg8qlg', 'template_nnt01mg', form.current, {
+                publicKey: '_Oq2Znpcmcz37CG9t',
+            })
+            .then(
+                () => {
+                    console.log('SUCCESS!');
+                },
+                (error) => {
+                    console.log('FAILED...', error.text);
+                },
+            );
+        e.target.reset()
+    };
+
+
     return (
         <BackImageWrapper>
-            <StyledContacts>
+            <StyledContacts id={'Контакты'}>
                 <MyContainer>
-                    <Fade>
                         <SectionsTitle>Контакты</SectionsTitle>
-                        <StyledForm>
-                            <FieldWrapper>
-                                <StyledTitle>Name</StyledTitle>
-                                <Field placeholder={'name'}/>
-                                <StyledTitle>Email</StyledTitle>
-                                <Field placeholder={'subject'}/>
-                                <StyledTitle>Message</StyledTitle>
-                                <Field  placeholder={'message'} as={'textarea'}/>
-                            </FieldWrapper>
-                            <MyButton title={'Отправить'} />
+                    <StyledForm ref={form} onSubmit={sendEmail}>
+                    <FieldWrapper>
+                            <StyledTitle >ФИО</StyledTitle>
+                            <Field required placeholder={'Имя'} name='subject'/>
+                            <StyledTitle>Номер телефона</StyledTitle>
+                            <Field required placeholder={'Телефон'} name='numberPhone'/>
+                            <StyledTitle>Описание</StyledTitle>
+                            <Field required placeholder={'Введите текст'} as={'textarea'} name='message'/>
+                    </FieldWrapper>
+                                <MyButton title={'Отправить'} type={'submit'} />
                         </StyledForm>
-                    </Fade>
                 </MyContainer>
             </StyledContacts>
         </BackImageWrapper>

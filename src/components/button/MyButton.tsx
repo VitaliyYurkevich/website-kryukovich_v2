@@ -3,9 +3,11 @@ import styled from "styled-components";
 import {theme} from "../../style/Theme";
 import {Fade} from "react-awesome-reveal";
 
+
 type MyButtonPropsType = {
     title: string
     buttonColor?: string
+    type?: "button" | "submit" | "reset" | undefined
 }
 
 
@@ -13,7 +15,7 @@ export const MyButton = (props: MyButtonPropsType) => {
 
     return (
 
-            <ButtonStyled $buttonColor={props.buttonColor}>
+            <ButtonStyled type={props.type} $buttonColor={props.buttonColor}>
                 {props.title}
             </ButtonStyled>
 

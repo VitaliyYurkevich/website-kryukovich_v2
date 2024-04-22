@@ -11,7 +11,7 @@ export const Skills = () => {
     return (
         <StyledWrapperBackground>
             <MyContainer>
-                <StyledSkills>
+                <StyledSkills  id={'Опыт'}>
                     <Fade direction={'down'} >
                         <Skill text={'лет собственных'} goldenText={'тренировок'} count={20}/>
                         <Skill text={'пытавшихся'} count={1000} goldenText={'начать'}/>
