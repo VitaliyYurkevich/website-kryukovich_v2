@@ -13,7 +13,7 @@ import {Fade} from "react-awesome-reveal";
 export const Main = () => {
     return (
         <BackImageWrapper>
-            <StyledMain>
+            <StyledMain id={'main'}>
                 <MyContainer>
                     <FlexWrapper align={'center'} justify={'space-around'} wrap={'wrap'}>
                         <div>
